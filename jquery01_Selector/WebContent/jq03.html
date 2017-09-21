@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. p태그와 h1태그를 한번에 선택자로 지정 ... 글씨색을 오렌지로
+		
+		  $('p, h1').css('color', 'orange');
+		
+		  //$('div h1').css('background', 'black'); // ' '는 모든 자식을 의미한다.
+		 //$('div>h1').css('background', 'black'); // '>'는 직계자식만을 의미한다.
+		$('#wrap>h1').cs('background','cyon');
+		/* >는 직계자식 일때 사용을 표현이다..*/
+
+		//3. div 태그 중에서 id 값이 wrap 인 선택자를 지정  
+		$('.div#wrap').css('background','gray');
+		
+		// $('h1:eq(2)').css('border', '3px dashed red');
+
+		
+	});
+</script>
+</head>
+<body>
+	<p>오늘은 Jquery Test를 합니다.</p>
+	<h1>금요일입니다.</h1>
+	<div id='wrap'>의외로 오늘은 날씨가 덥습니다..
+	 <div> 자식자식 
+		<h1>주말에도 여전히 날씨가 좋을듯 합니다.</h1>
+		</div>
+	</div>
+	<h1>JQuery는 3,4일 정도 진행할 것입니다.</h1>
+	<div>BootStrap 스타디는 다음주터 진행하도록 합시다.</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

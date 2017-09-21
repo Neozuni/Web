@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>fadeIn(), fadeOut(), slideToggle()</title>
+<style type="text/css">
+	.image{ position: absolute; top: 10px; left: 10px; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. 페이지가 로딩되자마자...모든 이미지 들을 숨긴다.
+		$('.image').hide();
+		
+		//2. 첫번째 이미지가 샤라라락 보여지도록
+		$('.image').first().show(3000);
+		
+		//3. 보이는 이미지를 클릭할때마다 다음 이미지가 나타나도록..샤라라락
+		$('.image').click(function(event) {
+			//a 태그의 가장 기본적인 이벤트를 막는 함수...
+			event.preventDefault();
+			
+			//$(this).next().fadeIn(2000);
+			// var count=$(this).next().length //1 or 0
+			 //alert(count); 
+			 
+			 /* if(count==0){
+				 $('.image').hide();
+				 $('.image:eq(0)').fadeIn(2000);
+			 } */
+			 
+			var next= $(this).next().length?$(this).next():$('.image:first');
+			
+			/* fadeIn(), fadeOut() */
+			 /* $(this).fadeOut(3000);
+			 next.fadeIn(3000); */
+			 
+			 
+			 /*  slideToggle()*/
+			$(this).slideToggle(3000);
+			 next.slideToggle(3000); 
+			 
+		}); //click
+	});
+</script>
+</head>
+<body>
+	<a href="http://jquery.com" class="image">
+		<img alt="" src="./image/1.JPG" width="300" height="380">
+	</a>
+	
+	<a class="image">
+		<img alt="" src="./image/2.JPG" width="300" height="380">
+	</a>
+	
+	<a  class="image">
+		<img alt="" src="./image/3.JPG" width="300" height="380">
+	</a>
+	
+	<a  class="image">
+		<img alt="" src="./image/4.JPG" width="300" height="380">
+	</a>
+	
+	<a  class="image">
+		<img alt="" src="./image/5.JPG" width="300" height="380">
+	</a>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

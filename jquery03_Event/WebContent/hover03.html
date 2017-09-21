@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>hover() :: mouseenter, mouseleave 2가지 이벤트 포커스를 함께 지닌 함수 </title>
+<style type="text/css">
+	.reverse{
+	background : blue; color:white;
+}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+		$('h2').hover(function () {
+				$(this).addClass('reverse');
+		}, function () {
+				$(this).removeClass('reverse');
+		});
+		/* $('h2').bind('click', function (index,html) {
+			$(this).text(function(index,html){
+				return html+'ㅋㅋㅋㅋㅋ';
+			}); */
+			 $('h2').click('click', function (index,html) {
+			$(this).text(function(index,html){
+				return html+'ㅋㅋㅋㅋㅋ';
+			}); 
+		});
+		
+		
+	}); //functiond
+
+</script>
+</head>
+<body>
+
+
+<h2> 오늘 아침에는 비가 내렸습니다. </h2>
+<h2> 오후에는 비가 그쳐서 식사하러 가기 편할것 같네 </h2>
+<h2> 내일은 화창한 날이 된다고 일기예보에서 봣습니다. </h2>
+
+</body>
+</html>
+

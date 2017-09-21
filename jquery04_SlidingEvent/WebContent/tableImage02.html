@@ -1,0 +1,132 @@
+
+<!--  
+슬라이딩 효과를 가져오는 기능들
+:
+show(2000) / hide(3000)
+fadeInt()  / fadeOut()
+slideToggle()
+fadeTo(,,,) :: 투명도를 조절하는 기능 0~1(0안보이고  1보이고)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table tr td{
+		border: 2px solid black;
+		margin: 10px;
+		width: 80px;
+		height: 90px; 
+	}
+	
+	.small img{ border: none; margin: 10px; width: 100px; height: 110px; }
+	.large img{ width: 550px; }
+	.hover{ background: lime; color: black; }
+	
+	
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. 마우스가 사진 영역 안으로 들어가면 hover 효과를 td에 준다
+		$('.small').hover(function() {
+			$(this).parent().addClass('hover');
+			
+		//2. 마우스가 진입한 영역의 이미지를 얻어내자..attr()
+			var imagename=$(this).attr('href');
+		
+		//3. 현재 이미지(large)는 사라지게, 받아온 값으로 이미지가 보이게
+		/* $('.large').children().fadeOut(1000);
+		$('.large').children().attr('src',imagename);
+		$('.large').children().fadeIn(2000); */
+		
+		//4. fadeTo()
+		$('.large').fadeTo('slow',0,function(){
+			$(this).find('img').attr('src',imagename);
+		}).fadeTo('slow',0.5);
+		
+		}, function() {
+			$(this).parent().removeClass('hover');
+		});//hover
+		
+		//5. td 태그 안에서 p태그를 찾아서 css를 적용
+		//글씨 사이즈를 12, 진하게적용
+		$('td').find('p').css({
+			'font-size':'12',
+			'font-weight' : 'bold'
+		});//css
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td width="150" height="200" align="center">
+				<a href="./image/2.JPG" class="small">
+					<img alt="" src="./image/2.JPG">
+				</a>
+				<p>소 희</p>
+			</td>
+			
+			<td width="350"  align="center" rowspan="5">
+				<a href="./image/2.JPG" class="large">
+					<img alt="" src="./image/2.JPG">
+				</a>				
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="150" height="200" align="center">
+				<a href="./image/3.JPG" class="small">
+					<img alt="" src="./image/3.JPG">
+				</a>
+				<p>한승연</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="150" height="200" align="center">
+				<a href="./image/4.JPG" class="small">
+					<img alt="" src="./image/4.JPG">
+				</a>
+				<p>니쿤</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="150" height="200" align="center">
+				<a href="./image/5.JPG" class="small">
+					<img alt="" src="./image/5.JPG">
+				</a>
+				<p>장근석</p>
+			</td>
+		</tr>
+		
+		<tr>
+			<td width="150" height="200" align="center">
+				<a href="./image/1.JPG" class="small">
+					<img alt="" src="./image/1.JPG">
+				</a>
+				<p>김태희</p>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

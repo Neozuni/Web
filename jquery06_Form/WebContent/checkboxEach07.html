@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* $('#all').click(function() {
+			$('input[name=menu]').attr('checked',true);
+		});
+		
+		$('#reset').click(function() {
+			$('input[name=menu]').attr('checked',false);
+		}); */
+		
+		/* $('#all').click(function() {
+			$(':checkbox[name=menu]').prop('checked',true);
+		});
+		
+		$('#reset').click(function() {
+			$(':checkbox[name=menu]').prop('checked',false);
+		}); */
+		
+		$(':checkbox[name=allClick]').click(function () {
+			var allCheck=$(this).prop('checked');
+		});
+		
+		//1. 하나의 메뉴도 선택하지 않고 버튼을 누를 경우...
+		//$('select>option:selected').val()
+		$('#orderBtn').click(function() {
+			var menu=$('input[name=menu]:checked');
+			//alert(menu.length);//배열
+			if(menu.length==0){
+				alert("하나 이상의 메뉴는 선택하세요...");
+				return;
+			}else{ //하나 이상의 메뉴를 선택했다면...
+				//2. for문을 사용해서 내가 선택한 메뉴가 alert로 출력
+				/* var str="";
+				for(var i=0; i<menu.length; i++){
+					str+=$(menu[i]).val()+"  ";
+				}
+				alert("당신이 선택한 메뉴 :: "+str); */
+				
+				//3. each()를 사용해서
+				var str = "";
+				$.each(menu,function(index,item) {
+					str +=$(item).val()+" ";
+				});
+				//alert("당신이 선택한 메뉴 :: "+str);
+				
+				//4. div 영역에 선택한 메뉴를 출력..슬라이딩 효과로 뿌린다.
+				$('#menuView').html(str).slideToggle('slow');
+			}
+		});
+		
+	});
+</script>
+</head>
+<body>
+<h2>하나 이상의 메뉴를 선택하세요...</h2><p>
+<form action="#" id="menuFrm">
+	<input type="checkbox" name="allClick" value="전체선택" id="all">
+	<!-- <input type="button" value="전체해제" id="reset"> -->
+	<hr>
+	<input type="checkbox" name="menu" value="노가리">노가리<br>
+	<input type="checkbox" name="menu" value="곱창">곱창<br>
+	<input type="checkbox" name="menu" value="양꼬치">양꼬치<br>
+	<input type="checkbox" name="menu" value="족발">족발<br>
+	<input type="checkbox" name="menu" value="골뱅이무침">골뱅이무침<br><br>
+	<input type="button" value="주문하기" id="orderBtn">
+	
+	<div id="menuView"></div>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

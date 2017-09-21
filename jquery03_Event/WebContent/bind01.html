@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+		//h2 태그를 클릭하면 이벤트가 발생하도록 바인딩 함 
+		/* $('h2').bind('click', function () {
+			$(this).text(function (index,html) { // html& text 는 사용가능 하난 val은 폼테그에서만 사용가능함 ...	
+				return html+'ㅋㅋ';
+			});
+		});//bind */
+		
+		/* $('h2').bind('click', function () {
+		$(this).html(function (index,html) { // html& text 는 사용가능 하난 val은 폼테그에서만 사용가능함 ...	
+			return html+'ㅋㅋ';
+		});
+	});//bind */
+	
+		/* $('h2').var('click', function () {
+		$(this).text(function (index,html) { // html& text 는 사용가능 하난 val은 폼테그에서만 사용가능함 ...	
+			return html+'ㅋㅋ';
+		});
+	});//bind */
+	
+	//2.h2태그를 클릭하면 동시에 진행되도록 ... 스페이스,별,,,하트
+	$('h2').bind('click',function(){
+		$('h2').html(function (index,html) {
+			switch(index){
+			case 0 : return html+'별';
+			case 1 : return html+'스페이스';
+			case 2 : return html+'하트';
+			}
+			
+		});//html
+	});
+		
+	});
+
+</script>
+</head>
+<body>
+
+<h2> 오늘 아침에는 비가 내렸습니다. </h2>
+<h2> 오후에는 비가 그쳐서 식사하러 가기 편할것 같네 </h2>
+<h2> 내일은 화창한 날이 된다고 일기예보에서 봣습니다. </h2>
+
+</body>
+</html>
+

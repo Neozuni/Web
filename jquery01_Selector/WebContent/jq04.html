@@ -1,0 +1,56 @@
+<!--  
+$('p,h1,div') :: 여러개 태그를 한꺼번에 지정
+$('body p') :: body의 자식태그 p
+$('body>p') :: body의 직계 자식태그 p
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. 모든 태그를 선택자로 지정...color를 purple
+		//$('*').css('color','purple');
+		$('body *').css('color','purple');
+		
+		//2. body 태그의 직계자식을 선택자로 지정...border를 2  실선 green
+		//$('body>*').css('border','2px solid green');
+		$('body>*').css('border','2px solid green');
+		
+		//3. li 태그 중에서 짝수번쨰를 선택자로 지정
+		/* $('li:even').css('color','red');
+		$('li:odd').css('color','blue'); */
+		
+		//4. li 태그중에서 가장 첫번쨰 과일을 선택자로 지정...
+		//$('li:first').css('background','magenta');
+		//$('li').first().css('background','magenta');//method chaining
+		$('li:eq(0)').css('background','magenta');
+	});
+</script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>Apple</li>
+			<li>Banana</li>
+			<li>Peach</li>
+			<li>Melon</li>
+			<li>Grape</li>
+			<li>Berry</li>
+			<li>WaterMelon</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

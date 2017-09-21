@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table{ border: 3px solid magenta;
+		   width: 550px;
+		   margin: 0px auto;
+	}
+	tbody>tr {
+			text-align: center;
+	}
+	tr, th,td{
+		border: 1px dotted blue;
+		font-size: 1.2em;
+	}
+	.hover{ background: #00f; color: #fff; }
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('tr').hover(function() {
+			//현재 이벤트가 발생한 태그중에서 td 태그가 발견된다면,,addClass()적용
+			$(this).find('td').addClass('hover');
+			
+		}, function() {
+			$(this).find('td').removeClass('hover');
+			
+		});//hover
+	});
+</script>
+</head>
+<body>
+<div id="wrap">
+<h1 align="center">HOVER TEST....</h1><P>
+<table>
+	<thead>
+		<tr>
+			<th>이 름</th><th>직 업</th><th>주 소</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>손석희</td><td>아나운서</td><td>여의도</td>
+		</tr>
+		
+		<tr>
+			<td>류현진</td><td>운동선수</td><td>샌프란시스코</td>
+		</tr>
+		
+		<tr>
+			<td>정우성</td><td>영화배우</td><td>신사동</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
