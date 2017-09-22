@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		/* $('div').click(function() {			
+				//해당 영역을 복제해서 body에 덧붙인다.
+				$(this).clone().appendTo('body'); //append() 안됨
+		}); //click	 */	
+		
+		//on 사용
+		$('div').on('click', function() {
+			$(this).clone().appendTo('body');
+		});
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1>$(selector).on()</h1>
+		<p>on() 함수 :: 처음 존재했던 태그에만 이벤트가 적용됨</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

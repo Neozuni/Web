@@ -1,0 +1,9 @@
+127.0.0.1 - - [19/Sep/2017:21:53:58 +0900] "GET / HTTP/1.1" 200 11217
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:53:58 +0900] "GET /Bootstrap/home.html HTTP/1.1" 200 3869
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:55:03 +0900] "GET /Bootstrap/test.html HTTP/1.1" 200 4146
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/index.html HTTP/1.1" 200 4528
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/css/bootstrap.min.css HTTP/1.1" 200 122540
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/css/style.css HTTP/1.1" 200 33
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/js/jquery.min.js HTTP/1.1" 200 84380
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/js/bootstrap.min.js HTTP/1.1" 200 36816
+0:0:0:0:0:0:0:1 - - [19/Sep/2017:21:56:53 +0900] "GET /Bootstrap/js/scripts.js HTTP/1.1" 200 40

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+	//1. 첫번째 h2 태그를 클릭하면 ...
+	$('h2:first').click(function () {
+		//해당클릭 이벤트 부분이 click 로 바뀌도록 (색상이 붉은색 )
+		//$(this).html('<font color=red>click</font>')
+		$(this).html('click').css('color','red')
+		
+		
+		alert("click calling ... ");
+		$(this).unbind();
+		
+	}); // click
+		
+	});
+
+</script>
+</head>
+<body>
+
+<h2> 오늘 아침에는 비가 내렸습니다. </h2>
+<h2> 오후에는 비가 그쳐서 식사하러 가기 편할것 같네 </h2>
+<h2> 내일은 화창한 날이 된다고 일기예보에서 봣습니다. </h2>
+
+</body>
+</html>
+

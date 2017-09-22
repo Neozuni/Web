@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>div | span tag의 차이점 </title>
+</head>
+
+<!-- 다운 받은 js파일을 직접 연결 하는 방법  -->
+<script type="text/javascript" src="./js/jquery-3.2.1.js"'> </script>
+<script type="text/javascript">
+$(function() {
+	//1. span 이라는 태그를 선택자로 지정 .. 글씨를 green 
+	$('span').css('color','green').css('border','2px solid orange');
+	
+	//2. class 값이 my 인 선택자를 지정 ... 5px, 점선, purple
+	$('.my').css('border','2px dotted purple');
+	
+	//3.id가 content1인 선택자를 지정 배경은 yellow
+	$('#content1').css('background','yellow');
+});
+
+</script>
+<body>
+
+<p class="my">JQuery Select Test ...</p>
+
+<div>
+<div id="content1">id값이 concent1 인 div tag</div>
+<br>
+<div id="content2">id값이 concent2 인 div tag</div>
+</div>
+<br>
+<span>span</span>
+<span class="my">my span score</span>
+
+
+
+</body>
+</html>
+
+<!-- 특정 영역을 지정하는차이가 있음
+div 는 줄바꿈 | span 안바꿈  -->

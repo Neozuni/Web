@@ -1,0 +1,4 @@
+127.0.0.1 - - [09/Sep/2017:12:31:11 +0900] "GET / HTTP/1.1" 200 11217
+0:0:0:0:0:0:0:1 - - [09/Sep/2017:12:31:12 +0900] "GET /Bootstrap/home.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [09/Sep/2017:12:31:55 +0900] "GET /jquery01_Selector/textForm06.html HTTP/1.1" 200 705
+0:0:0:0:0:0:0:1 - - [09/Sep/2017:12:32:03 +0900] "GET /jquery01_Selector/textForm_result.jsp?userID=asdf&userName=adf&userAddr=sdf HTTP/1.1" 200 314

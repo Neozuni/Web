@@ -1,0 +1,14 @@
+127.0.0.1 - - [21/Sep/2017:18:04:06 +0900] "GET / HTTP/1.1" 200 11217
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:18:04:06 +0900] "GET /jquery07_DU/ui04_drag_drop.html HTTP/1.1" 200 2305
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:18:04:06 +0900] "GET /resources/demos/style.css HTTP/1.1" 404 1001
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:18:29:09 +0900] "GET /Bootstrap/index.html HTTP/1.1" 200 6665
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:21:53:24 +0900] "GET /Bootstrap/index.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:21:54:01 +0900] "GET /Bootstrap/test.html HTTP/1.1" 200 4146
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:21:54:07 +0900] "GET /Bootstrap/home.html HTTP/1.1" 200 8277
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:21:57:27 +0900] "GET /Bootstrap/index.html HTTP/1.1" 200 6286
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/1506000066.layoutit.html HTTP/1.1" 200 661
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/css/bootstrap.min.css HTTP/1.1" 200 122540
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/css/style.css HTTP/1.1" 200 33
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/js/jquery.min.js HTTP/1.1" 200 84380
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/js/bootstrap.min.js HTTP/1.1" 200 36816
+0:0:0:0:0:0:0:1 - - [21/Sep/2017:22:11:24 +0900] "GET /Bootstrap/js/scripts.js HTTP/1.1" 200 40

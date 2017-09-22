@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//1. 버튼을 클릭하면 배열을 생성 arr이라는 이름의,,,
+		$('#addOptionBtn').one('click',function() {
+			var arr = ["이효리", "이상순","아이유","이정재","장동건"];
+			
+			/*  each()를 이용해서 select 태그밑에 option 태그밑에다
+				배열 각각의 값을 붙인다.
+			*/
+			/* $.each(arr, function(index, item) {
+				var option = "<option value="+item+">"+item+"</option>";
+				$('#friend').append(option);
+			}); *///each
+			
+			$(arr).each(function(index) {
+				var option = "<option value="+arr[index]+">"+arr[index]+"</option>";
+				$('#friend').append(option);
+			}); 
+			
+		});
+	});
+</script>
+</head>
+<body>
+	<form name="frm" action="#">
+		<input type="button" value="option 생성" id="addOptionBtn"> 
+		<input type="button" value="option 삭제" id="deleteOptionBtn"> 
+		<select id="friend"></select>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

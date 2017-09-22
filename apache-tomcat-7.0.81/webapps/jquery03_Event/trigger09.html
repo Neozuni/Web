@@ -1,0 +1,59 @@
+<!-- event 함수
+::
+bind() | unbind() 
+html() text() | val()
+setTimeout() | setInterval()
+hover() 
+click()
+find() 
+show(), fadeIn | hide(),  fadeout()
+
+-------------------------------
+
+
+  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>trigger :: 특별한 액션을 취하지 않아도 자동적으로 이벤트를 발생시키는 함수 </title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+/// 클릭 할때 마다이벤트 발생 
+	$ (function(){ 
+		$('h1').click(function(){
+			$(this).html(function (index,html) {
+				return html+'z';
+				}); // html
+			}); // click
+		
+			//2. 클릭하지 않아도 자동적으로 위와 동일한결과가 진행되도록 강제 ...
+			//setInterval()
+			setInterval(function () {
+				$('h1').trigger('click');
+			},1000); 
+			
+			
+		 /* $('button').click(function () {
+				$('h1').unbind();
+			}); */ 
+			
+			
+	});//function
+
+	function stopTrigger() {
+		$('h1').unbind();
+	}
+	
+</script>
+</head>
+<body>
+<h1> * </h1>
+<button> stop trigger event </button> 
+<hr>
+<input type="button" value="Stop Trigger Button" onclick="stopTrigger()" > 
+
+</body>
+</html>
+

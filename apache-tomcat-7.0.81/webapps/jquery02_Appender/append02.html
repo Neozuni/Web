@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>addClass()</title>
+<style type="text/css">
+	.angel{
+	border: 2px; width: 200px; height: 250px;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+	//1. 바디테그에 happy nice day 를 붙인다 ...
+	$('body').append('<h3>Have a nice day</h3>');
+	//2. h3를 선택자로 지정 .
+	$('h3:eq(0)').prepend('<font>Good Day</font><br>');
+	
+	//3.이미지를 부착 
+	var img1 = "<img src='./image/1.JPG'>";
+	var img2 = "<img src='./image/2.JPG'>";
+	var img3 = "<img src='./image/3.JPG'>";
+	
+	//4. 잘나가는  그녀들 주르르 사진붙이기
+	
+	var h1 = "<h1> 잘나가는 그녀들 ... </h1>";
+	
+	$('body').append(h1,img1,img2,img3);
+	
+	//5. addClass()사용법을 반드시 익히자 !!
+	//특정한 태그에 css의 기능을 입힐때 사용 한다. 
+	//addClass() 는 html 와 css 의 완벽한 분리를 가능하게 한다.
+	
+	$('img').addClass('angel');
+		
+	});
+
+</script>
+</head>
+<body>
+
+
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>setTimeout() | setInterval() | append(), appendTo()</title>
+<style type="text/css">
+	.boy{
+	border: 2px; width: 200px; height: 250px;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+		//1. img 태그를 선택자로 지정 ..; boy 클래스 속성을 연결 
+		$('img').addClass('boy');
+		
+		//2. 3초뒤에 맨 앞의 이미지가 맨 뒤에 가서 붙도록 
+		// setTime는 단 한번만 호출되는특징을 가진다 ...
+		/* setTimeout(function() {
+			// 이 일이 일어난다 3초뒤에 ~
+			$('body').append($('img:first'));
+		},3000); */
+		
+		//3. intercal 을 두고 계속 호출되는 함수 : setInterval()
+	/* 	setInterval(fuction(){
+			$('body').append($('img:first'));
+			
+		},2000); */
+		
+		//4. setInterval()을 이용 ... 첫번째 이미지를 선택자로 지정 
+		// 그걸 body태그에 append 하는 방식으로 수정해보세요
+		
+		setInterval(function() {
+			$('img').first().appendTo('body');
+		},500);
+		
+	});
+
+</script>
+</head>
+<body>
+	<img alt="" src="./image/3.JPG">
+	<img alt="" src="./image/4.JPG">
+	<img alt="" src="./image/5.JPG">
+</body>
+</html>
+

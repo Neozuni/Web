@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>filter() :: 동일한 여러개의태그를 특정한 조건을 주어서 걸러내는 기능 </title>
+<style type="text/css">
+.view{
+		background : greenyellow;
+		color : blue;
+}
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+	/* 
+	h1태그중에서 3의 배수이거나 혹은 5의 배수가 되는 태그를 걸러 ...
+	*/
+	$('h1').filter(function (index) { //%
+		return	index % 3==0 || index % 5==0;
+	}).addClass('view');
+	
+	});
+
+</script>
+</head>
+<body>
+	<h1>Item-0</h1>
+	<h1>Item-1</h1>
+	<h1>Item-2</h1>
+	<h1>Item-3</h1>
+	<h1>Item-4</h1>
+	<h1>Item-5</h1>
+	<h1>Item-6</h1>
+	<h1>Item-7</h1>
+	
+</body>
+</html>
+

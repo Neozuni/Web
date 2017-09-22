@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>each() 함수 사용법</title>
+<style type="text/css">
+.high_Light_0{background: yellow;}
+.high_Light_1{background: black;}
+.high_Light_2{background: red;}
+.high_Light_3{background: blue;}
+.high_Light_4{background: gray;}
+.high_Light_5{background: green;}
+.high_Light_6{background: pink;}
+.high_Light_7{background: orange;}
+
+/* class 속성을 하나 더 추가 */
+.kosta{ color: blue; font-family: " comic sans ms";}
+.th{border: 3px solid black;}
+
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+
+	$ (function(){
+	/* $('hi:eq(0)').addClass('firstCss'); */
+		/* 
+		each() 특정한동일한 태그가 반복 될 때 주로 사용됨 
+		일종의 for문과 같다.
+		h1 태그에 .... each() 함수 적용 하면 
+		h1태그의 갯수 만큼 wach() 함수가 실행되는 원리이다 .
+		첫번째  index는 0부터 시작한다. 
+		*/ 
+		
+		
+		$('h1').each(function (index) { // 0~7 
+			//$('h1').addClass('high_light'+index); // x
+			$(this).addClass('high_Light_'+index); //O
+		});//each
+		
+		//2.반복문을 빠져나와서 별개의 css 를 다시 적용 
+		//h1 두번째 태그에 kosta 를 적용
+		$('h1:eq(1)').addClass('kosta');
+		
+		//3. 여러개의 h1태그 중에서 짝수번쨰에 th 를 적용 
+		$('h1:even').addClass('th');
+		//$('h1:odd').addClass('th');
+		
+	});
+
+</script>
+</head>
+<body>
+	<h1>Item-0</h1>
+	<h1>Item-1</h1>
+	<h1>Item-2</h1>
+	<h1>Item-3</h1>
+	<h1>Item-4</h1>
+	<h1>Item-5</h1>
+	<h1>Item-6</h1>
+	<h1>Item-7</h1>
+	
+</body>
+</html>
+

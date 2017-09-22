@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		position: relative;
+	}
+</style>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(function() {
+		//좌우 이동의 원리
+		$('img').animate({left:'+350'}, 'fast');
+		$('img').animate({left:'+100'}, 'slow');
+		$('img').animate({left:'+700'}, 'fast');
+		
+		//redbird의 동적원리
+		$('img').animate({left:'+200'}, 'slow');
+		$('img').animate({width:'+250'}, 'fast');
+		$('img').animate({height:'+200'}, 'slow');
+		
+		//상하 이동의 원리
+		$('img').animate({top:'+200'}, 'slow');
+		$('img').animate({top:'+500'}, 'fast');
+		$('img').animate({top:'+50'}, 'slow');
+		$('img').animate({left:'+110',top:'+150'}, 'slow');
+		
+		//1. 5초 뒤에 레드버드가 사라지도록...setTimeout(), hide()
+		setTimeout(function() {
+			$('img').hide();
+			alert("redBird 숨었당!!");
+		},5000);
+		//2. 10초 뒤에 다시 나타나도록 하는데..이때 popup창
+		setTimeout(function() {
+			$('img').show();
+			alert("두두두두두 두두두두 두~~둥~~~~");
+		},10000);
+	});
+</script>
+</head>
+<body>
+	<img alt="" src="./image/redbird.png">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
